@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SURPRISUS</title>
+</head>
+<body>
+    <iframe id="SUS" width="879" height="494" src="https://www.youtube.com/embed/fMcWA544-5A?&autoplay=1" title="SURPRISUS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function refresh() {
+            var rand = Math.floor(Math.random() * 30);
+            console.log("Restarting in : " + rand);
+            await sleep(rand * 10000);
+            window.location.reload();
+        }
+
+        refresh();
+    </script>
+</body>
+</html>
