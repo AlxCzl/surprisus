@@ -25,9 +25,12 @@
         }
 
         async function refresh() {
+            await sleep(10 * 1000);
+            var jersus = document.getElementById("jermasus");
+            jersus.setAttribute("style", "filter: brightness(0)");
             var rand = Math.floor(Math.random() * 30);
             console.log("Restarting in : " + rand);
-            await sleep(rand * 10000);
+            await sleep(rand * 20000);
             window.location.reload();
         }
 
